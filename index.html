@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="https://i.ibb.co/khy45hh/mm.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+<pre>
+			 __        __                           __
+   ____ ___  ____  _____/ /_____  / /__________ ___  ___  _____/ /_____
+  / __ `__ \/ __ \/ ___/ //_/ _ \/ __/ ___/ __ `__ \/ _ \/ ___/ //_/ _ \
+ / / / / / / /_/ / /  / ,< /  __/ /_(__  ) / / / / /  __/ /  / ,< /  __/
+/_/ /_/ /_/\____/_/  /_/|_|\___/\__/____/_/ /_/ /_/\___/_/  /_/|_|\___/
+
+</pre>
+		<div class="main">
+      <h1 class="title">Dostęp do morketsmerke.org przez IRC</h1>
+      <p>
+        Możliwe jest komunikacja z autorem materiałów zamieszczanych na
+        morketsmerke.org za pomocą protokołu IRC.
+      </p>
+      <p>
+        Domyślnie wspieraną platformą są dystrybucje Linuka oraz klient
+        <code class="code-inline">irssi</code>.
+      </p>
+      <p>
+        Aby dodać konfigurację serwera IRC (serwer morketsmerke działa po
+        TLS-ie) do programu <em>irssi</em> należy po jego uruchomieniu wydać
+        następujące polecenia (w CLI programu <em>irssi</em> oczywiście).
+      </p>
+<pre class="code-block">
+/server add [-auto] -tls -tls_verify -tls_capath /etc/ssl/certs -network morketsmerke.net irc.morketsmerke.net 6697
+/save
+</pre>
+      <p>
+        Za pomocą polecenia <code class="code-inline">/server add</code> dodamy
+        serwer do konfiguracji programu. Opcja 
+        <code class="code-inline">-auto</code> jest opcjonalna - powoduje że
+        klient (program <em>irssi</em>) będzie automatycznie łączył się z tym
+        serwerem zaraz po uruchomieniu. Polecenie
+        <code class="code-inline">/save</code> zapisze wprowadzone zmiany w
+        konfiguracji do plików startowych programu dla poszczególnych
+        użytkowników.
+      </p>
+      <p>
+        Po zapisaniu zmiany aby połączyć się z serwerem należy wydać
+        następujące polecenie aby połączyć się z serwerem.
+      </p>
+<pre class="code-block">
+/connect irc.morketsmerke.org
+</pre>
+      <p>
+        <img src="https://i.ibb.co/M6rDWFc/polaczenie-z-serwerem-irc.png" alt="polaczenie-z-serwerem-irc" border="0">
+      </p>
+      <p>
+        W ten sposób powinniśmy się połączyć z serwerem.
+      </p>
+      <p>
+        Samo połączenie z serwerem nie pozwala prowadzenie rozmów. Niezbędne
+        jest wybranie odpowiedniego kanału. Kanał
+        <code class="code-inline">#general</code> można uznać za kanał ogólny,
+        jest swojego rodzaju szersze forum. Kanał ten jest dostępny zawsze.
+        Aby dołączyć się do kanału <em>general</em> należy wydać następujące
+        polecenie:
+      </p>
+<pre class="code-block">
+/join general
+</pre>
+      <p>
+        <img src="https://i.ibb.co/q1nLzjh/kanal-irc-general.png" alt="kanal-irc-general" border="0">
+      </p>
+      <p>
+        Użytkownik <em>gop</em> jest operatorem kanału <em>general</em>
+        (jest to pozostawiona sesja, w celu utrzymania kanału - użytkownik gop
+        nam nie odpowie).
+      </p>
+			<p>&nbsp;</p>
+			<p class="footer">
+				2024; COPYLEFT; ALL RIGHTS REVERSED;
+			</p>
+
+		</body>
+	</html>
+
+        
